@@ -1,1 +1,128 @@
 # To-my-future-girlfriend-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Fancy Website 💌</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #f6d365, #fda085);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .folders {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .folder {
+      width: 120px;
+      height: 100px;
+      background: #ffe97f;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .folder:hover {
+      transform: scale(1.1);
+    }
+
+    .folder::before {
+      content: '';
+      width: 100%;
+      height: 30px;
+      background: #ffd54f;
+      border-radius: 10px 10px 0 0;
+      position: absolute;
+      top: -20px;
+      left: 0;
+    }
+
+    .letter {
+      display: none;
+      margin-top: 20px;
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: fadeInUp 0.6s ease;
+      max-width: 300px;
+    }
+
+    .stickers {
+      margin-top: 10px;
+      font-size: 2em;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💖 Special for You 💖</h1>
+    <div class="folders">
+      <div class="folder" onclick="openLetter(1)">Folder 1</div>
+      <div class="folder" onclick="openLetter(2)">Folder 2</div>
+      <div class="folder" onclick="openLetter(3)">Folder 3</div>
+    </div>
+    <div id="letter1" class="letter">
+      <p>Hi! 🌸 You're so special to me!</p>
+      <div class="stickers">💐✨🥰</div>
+    </div>
+    <div id="letter2" class="letter">
+      <p>Always remember, I'm here for you 💌</p>
+      <div class="stickers">🌙💕🌟</div>
+    </div>
+    <div id="letter3" class="letter">
+      <p>Thank you for everything! 💖</p>
+      <div class="stickers">🌸🦋🌈</div>
+    </div>
+  </div>
+
+  <!-- Background romantic music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/01/23/audio_c4d5d8fcb3.mp3?filename=country-life-guitar-piano-violin-instrumental-203577.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function openLetter(num) {
+      // Hide all letters
+      document.querySelectorAll('.letter').forEach(l => l.style.display = 'none');
+      // Show selected letter
+      document.getElementById('letter' + num).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
